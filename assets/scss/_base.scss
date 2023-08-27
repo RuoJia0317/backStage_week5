@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0');
+
+body{
+  font-family: 'Lato', sans-serif,'Roboto Mono', monospace;
+  line-height: 1.5;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+li{
+  list-style:none;
+}
+
+a {
+  text-decoration:none;
+}
+
+.border-link-success{
+  border-left: 4px solid transparent;
+}
+
+.border-link-success:hover{
+  border-left: 4px solid $success;
+}
+
+.circle-shape{
+  max-width: 40px;
+  max-height: 40px;
+  clip-path: circle(50%);
+}
+
+.fit-img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.main{
+  margin-left: 296px;
+}
