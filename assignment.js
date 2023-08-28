@@ -3,7 +3,9 @@ const editorBox = document.querySelector("#editorBox");
 const ReplyBtnBox = document.querySelector("#ReplyBtnBox");
 const replyBtn = document.querySelector("#replyBtn");
 const cancelBtn = document.querySelector("#cancelBtn");
+const assignment = document.querySelector("#assignment");
 
+assignment.classList.add("sideBar-active")
 
 ClassicEditor
   .create( document.querySelector( '#editor' ))

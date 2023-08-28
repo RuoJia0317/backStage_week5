@@ -573,17 +573,17 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 2.5 !default; //40
+$h2-font-size:                $font-size-base * 2 !default; //32
+$h3-font-size:                $font-size-base * 1.75 !default; //28
+$h4-font-size:                $font-size-base * 1.5 !default; //24
+$h5-font-size:                $font-size-base * 1.25 !default; //20
+$h6-font-size:                $font-size-base !default; //16
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
+  1: $h1-font-size, 
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
@@ -839,11 +839,11 @@ $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           $body-color !default;
-$input-border-color:                    $gray-400 !default;
+$input-border-color:                    $gray-900 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
 
-$input-border-radius:                   $border-radius !default;
+$input-border-radius:                   $border-radius-2 !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 
@@ -872,7 +872,7 @@ $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width:                  1em !default;
+$form-check-input-width:                  1.1em !default;
 $form-check-min-height:                   $font-size-base * $line-height-base !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
@@ -883,8 +883,8 @@ $form-check-transition:                   null !default;
 $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
-$form-check-input-border:                 1px solid rgba($black, .25) !default;
-$form-check-input-border-radius:          .25em !default;
+$form-check-input-border:                 2px solid $dark !default;
+$form-check-input-border-radius:          .15em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
@@ -1200,25 +1200,25 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  $dark !default;
 $pagination-bg:                     $white !default;
-$pagination-border-radius:          $border-radius !default;
+$pagination-border-radius:          $border-radius-2 !default;
 $pagination-border-width:           $border-width !default;
 $pagination-margin-start:           ($pagination-border-width * -1) !default;
-$pagination-border-color:           $gray-300 !default;
+$pagination-border-color:           $green !default;
 
 $pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-focus-bg:               $gray-200 !default;
+$pagination-focus-bg:               $green !default;
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-color:            $dark !default;
 $pagination-hover-bg:               $gray-200 !default;
-$pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-border-color:     $green  !default;
 
 $pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
-$pagination-active-border-color:    $pagination-active-bg !default;
+$pagination-active-bg:              $green !default;
+$pagination-active-border-color:    $green !default;
 
 $pagination-disabled-color:         $gray-600 !default;
 $pagination-disabled-bg:            $white !default;
@@ -1407,9 +1407,9 @@ $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
-$modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
+$modal-content-border-color:        $gray-400 !default;
 $modal-content-border-width:        $border-width !default;
-$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-border-radius:       $border-radius-2 !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
@@ -1418,7 +1418,7 @@ $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
 
 $modal-header-border-color:         var(--#{$prefix}border-color) !default;
-$modal-header-border-width:         $modal-content-border-width !default;
+$modal-header-border-width:         0 !default;
 $modal-header-padding-y:            $modal-inner-padding !default;
 $modal-header-padding-x:            $modal-inner-padding !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
@@ -1428,7 +1428,7 @@ $modal-footer-border-color:         $modal-header-border-color !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
 
 $modal-sm:                          300px !default;
-$modal-md:                          500px !default;
+$modal-md:                          480px !default;
 $modal-lg:                          800px !default;
 $modal-xl:                          1140px !default;
 
